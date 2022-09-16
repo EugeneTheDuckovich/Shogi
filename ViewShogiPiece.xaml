@@ -1,0 +1,230 @@
+﻿<UserControl x:Class="Shogi.ViewShogiPiece"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             SnapsToDevicePixels="True">
+    <UserControl.Resources>
+        <DropShadowEffect x:Key="Shadow" BlurRadius="5" ShadowDepth="0" Color="Black"/>
+        <Style TargetType="Path" x:Key="InvisiblePiece">
+            <Setter Property="Fill" Value="AntiqueWhite"/>
+            <Setter Property="Effect" Value="{StaticResource Shadow}"/>            
+            <Setter Property="Visibility" Value="Collapsed"/>
+        </Style>
+        <Style TargetType="Path" x:Key="BlackPiece" BasedOn="{StaticResource InvisiblePiece}">
+            <Setter Property="Data" Value="M 10,10 L 70,10 L 60,60 L 40,70 L 20,60 Z"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding PieceColor, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="Black">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Path" x:Key="WhitePiece" BasedOn="{StaticResource InvisiblePiece}">
+            <Setter Property="Data" Value="M 10,70 L 70,70 L 60,20 L 40,10 L 20,20 Z"/>
+            <Setter Property="Effect" Value="{StaticResource Shadow}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding PieceColor, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="White">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="InvisibleText">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="RussianPieceText" BasedOn="{StaticResource InvisibleText}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding PieceLanguage, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="Russian">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+               <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackKing">
+                    <Setter Property="Text" Value="Король"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteKing">
+                    <Setter Property="Text" Value="Король"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteGold">
+                    <Setter Property="Text" Value="Золотий Генерал"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackGold">
+                    <Setter Property="Text" Value="Золотий Генерал"/>
+               </DataTrigger>
+               <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackSilver">
+                    <Setter Property="Text" Value="Срібний Генерал"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteSilver">
+                    <Setter Property="Text" Value="Срібний Генерал"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedSilver">
+                    <Setter Property="Text" Value="Пер. Срібний Генерал"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedSilver">
+                    <Setter Property="Text" Value="Пер. Срібний Генерал"/>
+               </DataTrigger>
+               <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackPyke">
+                    <Setter Property="Text" Value="Піка"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhitePyke">
+                    <Setter Property="Text" Value="Піка"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedPyke">
+                    <Setter Property="Text" Value="Пер. Піка"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedPyke">
+                    <Setter Property="Text" Value="Пер. Піка"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackKnight">
+                    <Setter Property="Text" Value="Кінь"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteKnight">
+                    <Setter Property="Text" Value="Кінь"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedKnight">
+                    <Setter Property="Text" Value="Пер. Кінь"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedKnight">
+                    <Setter Property="Text" Value="Пер. Кінь"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackRook">
+                    <Setter Property="Text" Value="Тура"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteRook">
+                    <Setter Property="Text" Value="Тура"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedRook">
+                    <Setter Property="Text" Value="Тура- Дракон"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedRook">
+                    <Setter Property="Text" Value="Тура- Дракон"/>
+               </DataTrigger>
+               <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackBishop">
+                    <Setter Property="Text" Value="Слон"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteBishop">
+                    <Setter Property="Text" Value="Слон"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedBishop">
+                    <Setter Property="Text" Value="Слон- Дракон"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedBishop">
+                    <Setter Property="Text" Value="Слон- Дракон"/>
+               </DataTrigger>
+               <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackPawn">
+                    <Setter Property="Text" Value="Пішак"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhitePawn">
+                    <Setter Property="Text" Value="Пішак"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedPawn">
+                    <Setter Property="Text" Value="Токін"/>
+               </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedPawn">
+                    <Setter Property="Text" Value="Токін"/>
+               </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="JapanPieceText" BasedOn="{StaticResource InvisibleText}">
+            <Setter Property="FontSize" Value="20"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding PieceLanguage, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="Japanise">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackKing">
+                    <Setter Property="Text" Value="王         将"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteKing">
+                    <Setter Property="Text" Value="王         将"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteGold">
+                    <Setter Property="Text" Value="金         将"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackGold">
+                    <Setter Property="Text" Value="金         将"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackSilver">
+                    <Setter Property="Text" Value="銀         将"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteSilver">
+                    <Setter Property="Text" Value="銀         将"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedSilver">
+                    <Setter Property="Text" Value="成         銀"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedSilver">
+                    <Setter Property="Text" Value="成         銀"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackPyke">
+                    <Setter Property="Text" Value="香         車"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhitePyke">
+                    <Setter Property="Text" Value="香         車"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedPyke">
+                    <Setter Property="Text" Value="成         香"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedPyke">
+                    <Setter Property="Text" Value="成         香"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackKnight">
+                    <Setter Property="Text" Value="桂         馬"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteKnight">
+                    <Setter Property="Text" Value="桂         馬"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedKnight">
+                    <Setter Property="Text" Value="成         桂"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedKnight">
+                    <Setter Property="Text" Value="成         桂"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackRook">
+                    <Setter Property="Text" Value="飛         車"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteRook">
+                    <Setter Property="Text" Value="飛         車"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedRook">
+                    <Setter Property="Text" Value="竜         王"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedRook">
+                    <Setter Property="Text" Value="竜         王"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackBishop">
+                    <Setter Property="Text" Value="角         行"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteBishop">
+                    <Setter Property="Text" Value="角         行"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedBishop">
+                    <Setter Property="Text" Value="竜         馬"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedBishop">
+                    <Setter Property="Text" Value="竜         馬"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackPawn">
+                    <Setter Property="Text" Value="歩         兵"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhitePawn">
+                    <Setter Property="Text" Value="歩         兵"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="BlackFlippedPawn">
+                    <Setter Property="Text" Value="と         金"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Piece, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="WhiteFlippedPawn">
+                    <Setter Property="Text" Value="と         金"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Path Style="{StaticResource BlackPiece}"/>
+        <Path Style="{StaticResource WhitePiece}"/>
+        <TextBlock Style="{StaticResource RussianPieceText}"/>
+        <TextBlock Style="{StaticResource JapanPieceText}"/>
+    </Grid>
+</UserControl>

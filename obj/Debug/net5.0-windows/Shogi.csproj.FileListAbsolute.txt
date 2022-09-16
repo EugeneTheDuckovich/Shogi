@@ -1,0 +1,64 @@
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.csproj.AssemblyReference.cache
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi_MarkupCompile.cache
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi_MarkupCompile.lref
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\ViewShogiPiece.g.cs
+C:\Users\38099\source\repos\Soges\bin\Debug\net5.0-windows\Shogi.exe
+C:\Users\38099\source\repos\Soges\bin\Debug\net5.0-windows\Shogi.deps.json
+C:\Users\38099\source\repos\Soges\bin\Debug\net5.0-windows\Shogi.runtimeconfig.json
+C:\Users\38099\source\repos\Soges\bin\Debug\net5.0-windows\Shogi.runtimeconfig.dev.json
+C:\Users\38099\source\repos\Soges\bin\Debug\net5.0-windows\Shogi.dll
+C:\Users\38099\source\repos\Soges\bin\Debug\net5.0-windows\ref\Shogi.dll
+C:\Users\38099\source\repos\Soges\bin\Debug\net5.0-windows\Shogi.pdb
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\ViewShogiPiece.baml
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.g.resources
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.AssemblyInfoInputs.cache
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.AssemblyInfo.cs
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.csproj.CoreCompileInputs.cache
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.dll
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\ref\Shogi.dll
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.pdb
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\Shogi.genruntimeconfig.cache
+C:\Users\38099\source\repos\Soges\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\my projects\Soges\bin\Debug\net5.0-windows\Shogi.exe
+C:\my projects\Soges\bin\Debug\net5.0-windows\Shogi.deps.json
+C:\my projects\Soges\bin\Debug\net5.0-windows\Shogi.runtimeconfig.json
+C:\my projects\Soges\bin\Debug\net5.0-windows\Shogi.runtimeconfig.dev.json
+C:\my projects\Soges\bin\Debug\net5.0-windows\Shogi.dll
+C:\my projects\Soges\bin\Debug\net5.0-windows\Shogi.pdb
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.csproj.AssemblyReference.cache
+C:\my projects\Soges\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\ViewShogiPiece.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\App.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi_MarkupCompile.cache
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi_MarkupCompile.lref
+C:\my projects\Soges\obj\Debug\net5.0-windows\MainWindow.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\ViewShogiPiece.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.g.resources
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.GeneratedMSBuildEditorConfig.editorconfig
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.AssemblyInfoInputs.cache
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.AssemblyInfo.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.csproj.CoreCompileInputs.cache
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.dll
+C:\my projects\Soges\obj\Debug\net5.0-windows\ref\Shogi.dll
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.pdb
+C:\my projects\Soges\obj\Debug\net5.0-windows\Shogi.genruntimeconfig.cache
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\RulesPage.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\GamePage\GamePage.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\MenuPage\MenuPage.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\RulesPage.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\GamePage\GamePage.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\MenuPage\MenuPage.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\refint\Shogi.dll
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\CommonRulesPage.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\HowPiecesMovePage.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\MovementRulesPage.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\TransformationRulesPage.g.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\CommonRulesPage.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\HowPiecesMovePage.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\MovementRulesPage.baml
+C:\my projects\Soges\obj\Debug\net5.0-windows\RulePage\TransformationRulesPage.baml

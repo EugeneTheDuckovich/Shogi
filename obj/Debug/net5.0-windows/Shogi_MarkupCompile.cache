@@ -1,0 +1,20 @@
+﻿Shogi
+
+
+winexe
+C#
+.cs
+C:\my projects\Soges\obj\Debug\net5.0-windows\
+Shogi
+none
+false
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+C:\my projects\Soges\App.xaml
+91864376526
+
+311601017949
+193-1891726104
+GamePage\GamePage.xaml;MainWindow.xaml;MenuPage\MenuPage.xaml;RulePage\CommonRulesPage.xaml;RulePage\HowPiecesMovePage.xaml;RulePage\MovementRulesPage.xaml;RulePage\RulesPage.xaml;RulePage\TransformationRulesPage.xaml;ViewShogiPiece.xaml;
+
+True
+

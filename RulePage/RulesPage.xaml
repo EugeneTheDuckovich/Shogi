@@ -1,0 +1,40 @@
+﻿<Page x:Class="Shogi.RulesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RulesPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto" MaxHeight="600"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <MenuItem Header="меню" FontSize="20">
+                <MenuItem Header="повернутися в головне меню" FontSize="20" Command="{Binding DataContext.BackToMenuCommand, RelativeSource={RelativeSource AncestorType=Page}}"/>
+                <MenuItem Header="вийти з гри" FontSize="20" Command="{Binding DataContext.ExitCommand, RelativeSource={RelativeSource AncestorType=Page}}"/>
+            </MenuItem>
+        </Menu>
+        <Frame Name="RulesFrame" Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="2" NavigationUIVisibility="Hidden"/>
+        <Button Content="основні плавила" Grid.Column="1" Grid.Row="0" FontSize="20" Command="{Binding DataContext.GoToCommonRulesCommand, RelativeSource={RelativeSource AncestorType=Page}}"/>
+        <Button Content="Як ходять фігури" Grid.Column="3" Grid.Row="0" FontSize="20" Command="{Binding DataContext.GoToHowPiecesMoveCommand, RelativeSource={RelativeSource AncestorType=Page}}"/>
+        <Button Content="Правила ходу" Grid.Column="5" Grid.Row="0" FontSize="20" Command="{Binding DataContext.GoToMovementRulesCommand, RelativeSource={RelativeSource AncestorType=Page}}"/>
+        <Button Content="Перевтілення фігур" Grid.Column="7" Grid.Row="0" FontSize="20" Command="{Binding DataContext.GoToTransformationRulesCommand, RelativeSource={RelativeSource AncestorType=Page}}"/>
+    </Grid>
+</Page>
